@@ -5,7 +5,7 @@ const scoreElement = document.getElementById('score');
 
 let player = new Hero();
 let gameOver = false;
-let timeLeft = 5;
+let timeLeft = 30;
 let score = 0;
 
 function init() {
