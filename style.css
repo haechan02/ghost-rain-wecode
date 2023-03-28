@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: bisque;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+p {
+    padding: auto;
+    margin: auto;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+.game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+
+/* Interfaces */
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+}
+
+.gameScreen {
+    position: relative;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    color: navajowhite;
+    background-color: black;
+}
+
+#stopwatch {
+    display: flex;
+    /* position: absolute; */
+    left: 20px;
+    width: 100px;
+    height: auto;
+}
+
+.buttonStart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.buttonStart #start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: black;
+    color: navajowhite;
+    width: 50%;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+
+#start:hover {
+    opacity: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Background */
+
+
+#bg {
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    width: 800px;
+    height: 500px;
+    background-color: black;
+    background: url("./images/bg.png") no-repeat;
+    background-size: 800px 500px;
+    background-position: centers;
+    margin: 0 auto;
+}
+
+.lives{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hearts {
+    display: inline-block;
+    width: 3%;
+
+    margin: 0 10px;
+    /* display: flex; */
+    justify-content: end;
+}
+
+/* Hero */
+#hero{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 35px;
+    height: 54px;
+    /* background-color: transparent; */
+    background: url("./images/hero.png") no-repeat;
+    background-position: centers;
+}
+
+#hero.stop {
+    background-position: 0;
+}
+
+#hero.left {
+    background-position: -70px;
+}
+
+#hero.right {
+    background-position: -105px;
+}
+
+/* Ghost */
+#ghost{
+    position: absolute;
+    width: 45px;
+    height: 54px;
+    background-color: transparent;
+}
+
+/* #ghost.die {
+    background-position: -45px;
+} */
